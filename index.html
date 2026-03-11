@@ -1,0 +1,2306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jay Maa Banjari – Fresh Ganna Juice Center, Birgoan Raipur</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500;600;700;800&family=Baloo+2:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --g1: #0d5c1f;
+        --g2: #1a7a2e;
+        --lime: #5cba32;
+        --limeL: #a8e063;
+        --y: #f6c90e;
+        --orange: #ff6b00;
+        --cream: #fdf8ee;
+        --brown: #2c1400;
+        --white: #fff;
+        --gray: #f5f5f0;
+        --textmid: #4a3520;
+        --textsub: #7a6550;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--cream);
+        color: var(--brown);
+        overflow-x: hidden;
+      }
+
+      /* ─── NAV ─────────────────────────────────── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 200;
+        background: rgba(253, 248, 238, 0.95);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(92, 186, 50, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5vw;
+        height: 64px;
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .nav-icon {
+        width: 38px;
+        height: 38px;
+        background: linear-gradient(135deg, var(--lime), var(--g1));
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+      }
+      .nav-name {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.15rem;
+        color: var(--g2);
+        line-height: 1;
+      }
+      .nav-name small {
+        display: block;
+        font-size: 0.65rem;
+        font-family: "Poppins", sans-serif;
+        color: var(--textsub);
+        font-weight: 400;
+      }
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+      }
+      .nav-links a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.8rem;
+        letter-spacing: 0.3px;
+        color: var(--textmid);
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--lime);
+      }
+      .nav-wa {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        background: #25d366;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 9px 20px;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-decoration: none;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+      }
+      .nav-wa:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 7px 22px rgba(37, 211, 102, 0.45);
+      }
+      @media (max-width: 680px) {
+        .nav-links {
+          display: none;
+        }
+        .nav-name small {
+          display: none;
+        }
+      }
+
+      /* ─── HERO ────────────────────────────────── */
+      #hero {
+        min-height: 100vh;
+        padding-top: 64px;
+        background: linear-gradient(
+          160deg,
+          #082d10 0%,
+          #0f5120 40%,
+          #1c8535 75%,
+          #5cba32 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-bg-text {
+        position: absolute;
+        font-family: "Abril Fatface", serif;
+        font-size: 28vw;
+        color: rgba(255, 255, 255, 0.03);
+        line-height: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        pointer-events: none;
+        letter-spacing: -2px;
+      }
+      .hero-circle-big {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        top: 50%;
+        right: -150px;
+        transform: translateY(-50%);
+      }
+      .hero-circle-sm {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        bottom: -80px;
+        left: -60px;
+      }
+      .hero-inner {
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        padding: 60px 6vw;
+        max-width: 1200px;
+        width: 100%;
+      }
+      @media (max-width: 800px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 40px;
+        }
+      }
+      .hero-left {
+      }
+      .hero-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        border-radius: 50px;
+        padding: 6px 16px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin-bottom: 24px;
+        animation: fadeUp 0.8s ease both;
+      }
+      .hero-pill span {
+        background: var(--y);
+        color: var(--brown);
+        border-radius: 50px;
+        padding: 1px 8px;
+        font-size: 0.7rem;
+        font-weight: 800;
+      }
+      .hero-h1 {
+        font-family: "Abril Fatface", serif;
+        font-size: clamp(3rem, 6.5vw, 5.8rem);
+        color: #fff;
+        line-height: 1;
+        text-shadow: 0 4px 32px rgba(0, 0, 0, 0.3);
+        animation: fadeUp 0.8s 0.1s ease both;
+      }
+      .hero-h1 em {
+        font-style: normal;
+        color: var(--y);
+      }
+      .hero-desc {
+        font-size: 1.05rem;
+        color: rgba(255, 255, 255, 0.78);
+        margin: 20px 0 36px;
+        line-height: 1.75;
+        max-width: 460px;
+        animation: fadeUp 0.8s 0.2s ease both;
+      }
+      @media (max-width: 800px) {
+        .hero-desc {
+          margin: 20px auto 36px;
+        }
+      }
+      .hero-btns {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        animation: fadeUp 0.8s 0.3s ease both;
+      }
+      @media (max-width: 800px) {
+        .hero-btns {
+          justify-content: center;
+        }
+      }
+      .btn-yellow {
+        background: var(--y);
+        color: var(--brown);
+        border: none;
+        border-radius: 50px;
+        padding: 14px 32px;
+        font-weight: 800;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        box-shadow: 0 6px 20px rgba(246, 201, 14, 0.5);
+      }
+      .btn-yellow:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(246, 201, 14, 0.55);
+      }
+      .btn-ghost {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+        border-radius: 50px;
+        padding: 14px 32px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: background 0.2s;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn-ghost:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .hero-stats {
+        display: flex;
+        gap: 32px;
+        margin-top: 44px;
+        animation: fadeUp 0.8s 0.4s ease both;
+      }
+      @media (max-width: 800px) {
+        .hero-stats {
+          justify-content: center;
+        }
+      }
+      .hero-stat .num {
+        font-family: "Baloo 2", cursive;
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--y);
+        line-height: 1;
+      }
+      .hero-stat .lbl {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 2px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+      .hero-stat-div {
+        width: 1px;
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      /* hero right – image frame */
+      .hero-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeUp 0.8s 0.2s ease both;
+      }
+      .hero-img-frame {
+        position: relative;
+        width: 340px;
+        height: 340px;
+      }
+      .hero-img-ring {
+        position: absolute;
+        inset: -12px;
+        border-radius: 50%;
+        border: 2px dashed rgba(255, 255, 255, 0.2);
+        animation: spinSlow 20s linear infinite;
+      }
+      @keyframes spinSlow {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .hero-img-ring2 {
+        position: absolute;
+        inset: -28px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .hero-img-circle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(135deg, var(--lime), var(--g1));
+      }
+      .hero-img-circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+      .hero-float-badge {
+        position: absolute;
+        bottom: 10px;
+        right: -10px;
+        background: #fff;
+        border-radius: 16px;
+        padding: 12px 16px;
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .hfb-icon {
+        font-size: 1.6rem;
+      }
+      .hfb-text .t1 {
+        font-weight: 800;
+        font-size: 0.85rem;
+        color: var(--g2);
+      }
+      .hfb-text .t2 {
+        font-size: 0.72rem;
+        color: var(--textsub);
+      }
+      .hero-float-tag {
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        background: var(--y);
+        color: var(--brown);
+        border-radius: 50px;
+        padding: 6px 16px;
+        font-weight: 800;
+        font-size: 0.78rem;
+        box-shadow: 0 4px 16px rgba(246, 201, 14, 0.4);
+      }
+      @media (max-width: 800px) {
+        .hero-right {
+          display: none;
+        }
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(28px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* wave divider */
+      .wave-div {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        background: var(--cream);
+      }
+      .wave-div svg {
+        display: block;
+      }
+
+      /* ─── ABOUT (OUR STORY) ───────────────────── */
+      #about {
+        background: var(--cream);
+        padding: 100px 6vw;
+      }
+      .about-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+      @media (max-width: 800px) {
+        .about-wrap {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+      }
+
+      /* left: image stack */
+      .about-img-stack {
+        position: relative;
+        height: 480px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .aimg-main {
+        width: 300px;
+        height: 360px;
+        border-radius: 32px;
+        overflow: hidden;
+        box-shadow: 0 24px 64px rgba(26, 122, 46, 0.22);
+        border: 4px solid #fff;
+        z-index: 2;
+        position: relative;
+        background: linear-gradient(135deg, var(--lime), var(--g1));
+      }
+      .aimg-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+      .aimg-deco {
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, var(--y), var(--orange));
+        top: 20px;
+        right: 20px;
+        z-index: 1;
+        box-shadow: 0 12px 40px rgba(255, 107, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 6rem;
+      }
+      .aimg-stat-card {
+        position: absolute;
+        bottom: 30px;
+        left: 0px;
+        z-index: 3;
+        background: #fff;
+        border-radius: 20px;
+        padding: 16px 22px;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .asc-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--lime), var(--g2));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+      .asc-num {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--g2);
+        line-height: 1;
+      }
+      .asc-lbl {
+        font-size: 0.72rem;
+        color: var(--textsub);
+      }
+      @media (max-width: 800px) {
+        .about-img-stack {
+          height: 360px;
+        }
+        .aimg-main {
+          width: 240px;
+          height: 300px;
+        }
+        .aimg-deco {
+          width: 170px;
+          height: 170px;
+          font-size: 4.5rem;
+          top: 10px;
+          right: 10px;
+        }
+        .aimg-stat-card {
+          left: 10px;
+          bottom: 0;
+        }
+      }
+
+      /* right: text */
+      .about-text {
+      }
+      .chip {
+        display: inline-block;
+        background: linear-gradient(90deg, var(--lime), var(--limeL));
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-radius: 50px;
+        padding: 5px 18px;
+        margin-bottom: 16px;
+      }
+      .about-h2 {
+        font-family: "Abril Fatface", serif;
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        color: var(--brown);
+        line-height: 1.1;
+        margin-bottom: 20px;
+      }
+      .about-h2 span {
+        color: var(--g2);
+      }
+      .about-p {
+        font-size: 0.97rem;
+        color: var(--textsub);
+        line-height: 1.85;
+        margin-bottom: 16px;
+      }
+      .about-feats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin: 28px 0;
+      }
+      .af-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #fff;
+        border-radius: 14px;
+        padding: 12px 16px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      }
+      .af-dot {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--lime), var(--g1));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .af-item span {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--textmid);
+      }
+
+      .owner-strip {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: linear-gradient(90deg, #f0fbe8, #fff);
+        border-left: 4px solid var(--lime);
+        border-radius: 0 16px 16px 0;
+        padding: 16px 20px;
+        margin-top: 8px;
+      }
+      .owner-photo {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--lime);
+        flex-shrink: 0;
+      }
+      .owner-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+      .owner-name {
+        font-weight: 800;
+        font-size: 1rem;
+        color: var(--g2);
+      }
+      .owner-sub {
+        font-size: 0.78rem;
+        color: var(--textsub);
+      }
+      .owner-quote {
+        font-size: 0.82rem;
+        color: var(--textsub);
+        font-style: italic;
+        margin-top: 4px;
+        border-top: 1px dashed rgba(0, 0, 0, 0.08);
+        padding-top: 6px;
+      }
+
+      /* ─── STATS BAND ──────────────────────────── */
+      .stats-band {
+        background: linear-gradient(90deg, var(--g1), var(--g2));
+        padding: 48px 6vw;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+      }
+      .sb-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 48px;
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .sb-item:last-child {
+        border-right: none;
+      }
+      .sb-num {
+        font-family: "Abril Fatface", serif;
+        font-size: 2.8rem;
+        color: var(--y);
+        line-height: 1;
+      }
+      .sb-lbl {
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 4px;
+      }
+      @media (max-width: 600px) {
+        .sb-item {
+          padding: 10px 24px;
+        }
+        .sb-num {
+          font-size: 2rem;
+        }
+      }
+
+      /* ─── MENU ────────────────────────────────── */
+      #menu {
+        background: var(--white);
+        padding: 100px 6vw;
+      }
+      .section-head {
+        text-align: center;
+        margin-bottom: 56px;
+      }
+      .section-head .chip {
+        background: linear-gradient(90deg, var(--orange), var(--y));
+      }
+      .section-head h2 {
+        font-family: "Abril Fatface", serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: var(--brown);
+        margin-top: 8px;
+      }
+      .section-head h2 span {
+        color: var(--g2);
+      }
+      .section-head p {
+        font-size: 0.95rem;
+        color: var(--textsub);
+        margin-top: 10px;
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 22px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .menu-card {
+        border-radius: 28px;
+        overflow: hidden;
+        background: var(--cream);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+        position: relative;
+        cursor: default;
+      }
+      .menu-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 24px 56px rgba(0, 0, 0, 0.1);
+      }
+      .mc-top {
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .mc-top::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: inherit;
+        filter: brightness(0.92);
+      }
+      .mc-top span {
+        position: relative;
+        z-index: 1;
+      }
+      .mc1 .mc-top {
+        background: linear-gradient(135deg, #c8f0a4, #7dcc40);
+      }
+      .mc2 .mc-top {
+        background: linear-gradient(135deg, #ffe8a3, #ffc106);
+      }
+      .mc3 .mc-top {
+        background: linear-gradient(135deg, #ffd4a3, #ff8c00);
+      }
+      .mc4 .mc-top {
+        background: linear-gradient(135deg, #b8f0cf, #28a856);
+      }
+      .mc5 .mc-top {
+        background: linear-gradient(135deg, #ffd6c8, #ff5722);
+      }
+      .mc6 .mc-top {
+        background: linear-gradient(135deg, #c4e8ff, #1e88e5);
+      }
+      .mc-body {
+        padding: 20px 22px 24px;
+      }
+      .mc-body h3 {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.1rem;
+        color: var(--brown);
+        margin-bottom: 4px;
+      }
+      .mc-body p {
+        font-size: 0.8rem;
+        color: var(--textsub);
+        line-height: 1.55;
+      }
+      .mc-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 14px;
+      }
+      .mc-price {
+        background: var(--g2);
+        color: #fff;
+        border-radius: 50px;
+        padding: 5px 16px;
+        font-weight: 800;
+        font-size: 0.88rem;
+      }
+      .mc-wa {
+        color: var(--lime);
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: transform 0.2s;
+      }
+      .mc-wa:hover {
+        transform: scale(1.2);
+      }
+
+      /* ─── WHY ─────────────────────────────────── */
+      #why {
+        padding: 100px 6vw;
+        background: var(--cream);
+        position: relative;
+        overflow: hidden;
+      }
+      #why::before {
+        content: "";
+        position: absolute;
+        right: -200px;
+        top: -200px;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(92, 186, 50, 0.08) 0%,
+          transparent 70%
+        );
+      }
+      .why-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 80px;
+        align-items: center;
+      }
+      @media (max-width: 800px) {
+        .why-wrap {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+      }
+      .why-left .chip {
+        background: linear-gradient(90deg, var(--g2), var(--lime));
+      }
+      .why-left h2 {
+        font-family: "Abril Fatface", serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: var(--brown);
+        line-height: 1.1;
+        margin-top: 8px;
+      }
+      .why-left h2 span {
+        color: var(--lime);
+      }
+      .why-left p {
+        font-size: 0.95rem;
+        color: var(--textsub);
+        line-height: 1.8;
+        margin-top: 16px;
+      }
+      .why-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--g2);
+        color: #fff;
+        border-radius: 50px;
+        padding: 13px 28px;
+        font-weight: 700;
+        font-size: 0.88rem;
+        text-decoration: none;
+        margin-top: 32px;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        box-shadow: 0 6px 20px rgba(26, 122, 46, 0.3);
+      }
+      .why-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(26, 122, 46, 0.4);
+      }
+      .why-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .why-card {
+        background: #fff;
+        border-radius: 22px;
+        padding: 26px 22px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .why-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+      }
+      .why-card-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin-bottom: 14px;
+      }
+      .wci1 {
+        background: #eefbe6;
+      }
+      .wci2 {
+        background: #fff8e0;
+      }
+      .wci3 {
+        background: #ffe8d6;
+      }
+      .wci4 {
+        background: #e0f5e8;
+      }
+      .wci5 {
+        background: #fce4ec;
+      }
+      .wci6 {
+        background: #e8eaf6;
+      }
+      .why-card h4 {
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: var(--brown);
+        margin-bottom: 6px;
+      }
+      .why-card p {
+        font-size: 0.78rem;
+        color: var(--textsub);
+        line-height: 1.6;
+      }
+
+      /* ─── REVIEWS (auto scroll) ──────────────── */
+      #reviews {
+        background: linear-gradient(160deg, #082d10, #0f5120 60%, #1c8535);
+        padding: 100px 0;
+        overflow: hidden;
+      }
+      .reviews-head {
+        text-align: center;
+        padding: 0 6vw;
+        margin-bottom: 56px;
+      }
+      .reviews-head .chip {
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .reviews-head h2 {
+        font-family: "Abril Fatface", serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: #fff;
+        margin-top: 8px;
+      }
+      .reviews-head h2 span {
+        color: var(--y);
+      }
+      .reviews-head p {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.95rem;
+        margin-top: 10px;
+      }
+
+      .reviews-track-wrap {
+        position: relative;
+      }
+      .reviews-track-wrap::before,
+      .reviews-track-wrap::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 120px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .reviews-track-wrap::before {
+        left: 0;
+        background: linear-gradient(90deg, #0a3d15, transparent);
+      }
+      .reviews-track-wrap::after {
+        right: 0;
+        background: linear-gradient(-90deg, #0a3d15, transparent);
+      }
+
+      .reviews-track {
+        display: flex;
+        gap: 20px;
+        width: max-content;
+        animation: scrollRev 40s linear infinite;
+      }
+      .reviews-track:hover {
+        animation-play-state: paused;
+      }
+      @keyframes scrollRev {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .rv-card {
+        width: 320px;
+        flex-shrink: 0;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        padding: 28px 26px;
+        backdrop-filter: blur(8px);
+        transition: background 0.3s;
+      }
+      .rv-card:hover {
+        background: rgba(255, 255, 255, 0.11);
+      }
+      .rv-top {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 16px;
+      }
+      .rv-avatar {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: linear-gradient(135deg, var(--lime), var(--g1));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        flex-shrink: 0;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+      }
+      .rv-name {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: #fff;
+      }
+      .rv-loc {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .rv-stars {
+        color: var(--y);
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+      }
+      .rv-text {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.75;
+        font-style: italic;
+      }
+      .rv-tag {
+        display: inline-block;
+        margin-top: 14px;
+        background: rgba(246, 201, 14, 0.15);
+        color: var(--y);
+        border-radius: 50px;
+        padding: 3px 12px;
+        font-size: 0.72rem;
+        font-weight: 600;
+      }
+
+      /* ─── LOCATION ────────────────────────────── */
+      #location {
+        background: var(--white);
+        padding: 100px 6vw;
+      }
+      .loc-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 70px;
+        align-items: start;
+      }
+      @media (max-width: 800px) {
+        .loc-wrap {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+      }
+      .loc-left .chip {
+        background: linear-gradient(90deg, var(--orange), var(--y));
+      }
+      .loc-left h2 {
+        font-family: "Abril Fatface", serif;
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        color: var(--brown);
+        margin: 8px 0 28px;
+        line-height: 1.1;
+      }
+      .loc-left h2 span {
+        color: var(--g2);
+      }
+      .loc-row {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 22px;
+        align-items: flex-start;
+      }
+      .loc-ic {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+      .lc1 {
+        background: #eefbe6;
+      }
+      .lc2 {
+        background: #fff3e0;
+      }
+      .lc3 {
+        background: #e3f2fd;
+      }
+      .loc-row h5 {
+        font-weight: 700;
+        font-size: 0.88rem;
+        color: var(--brown);
+        margin-bottom: 3px;
+      }
+      .loc-row p {
+        font-size: 0.83rem;
+        color: var(--textsub);
+        line-height: 1.6;
+      }
+      .loc-btns {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+      }
+      .btn-green {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: var(--g2);
+        color: #fff;
+        border-radius: 50px;
+        padding: 12px 24px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        text-decoration: none;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        box-shadow: 0 5px 18px rgba(26, 122, 46, 0.3);
+      }
+      .btn-green:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(26, 122, 46, 0.4);
+      }
+      .btn-wa2 {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        padding: 12px 24px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        text-decoration: none;
+        transition: transform 0.2s;
+      }
+      .btn-wa2:hover {
+        transform: translateY(-2px);
+      }
+      .map-box {
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: 0 16px 50px rgba(0, 0, 0, 0.13);
+        border: 3px solid var(--lime);
+      }
+      .map-box iframe {
+        width: 100%;
+        height: 320px;
+        display: block;
+        border: none;
+      }
+      .map-footer {
+        background: var(--g2);
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .map-footer a {
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.82rem;
+        text-decoration: none;
+      }
+
+      /* ─── ORDER ───────────────────────────────── */
+      #contact {
+        background: var(--cream);
+        padding: 100px 6vw;
+        position: relative;
+        overflow: hidden;
+      }
+      #contact::after {
+        content: "🌿";
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+        font-size: 18rem;
+        opacity: 0.035;
+        pointer-events: none;
+      }
+      .order-wrap {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .order-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 48px;
+      }
+      @media (max-width: 700px) {
+        .order-cards {
+          grid-template-columns: 1fr;
+        }
+      }
+      .oc {
+        background: #fff;
+        border-radius: 28px;
+        padding: 36px 28px;
+        text-align: center;
+        box-shadow: 0 6px 28px rgba(0, 0, 0, 0.06);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+        border-top: 4px solid transparent;
+      }
+      .oc:nth-child(1) {
+        border-color: var(--lime);
+      }
+      .oc:nth-child(2) {
+        border-color: #25d366;
+      }
+      .oc:nth-child(3) {
+        border-color: var(--orange);
+      }
+      .oc:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.1);
+      }
+      .oc-icon {
+        font-size: 2.8rem;
+        margin-bottom: 14px;
+      }
+      .oc h4 {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.15rem;
+        color: var(--brown);
+        margin-bottom: 8px;
+      }
+      .oc p {
+        font-size: 0.82rem;
+        color: var(--textsub);
+        line-height: 1.6;
+        margin-bottom: 22px;
+      }
+      .oc-btn {
+        display: inline-block;
+        border-radius: 50px;
+        padding: 11px 28px;
+        font-weight: 800;
+        font-size: 0.85rem;
+        text-decoration: none;
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s;
+      }
+      .oc-btn:hover {
+        transform: scale(1.05);
+      }
+      .oc-btn.call {
+        background: var(--g2);
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(26, 122, 46, 0.3);
+      }
+      .oc-btn.wa {
+        background: #25d366;
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+      }
+      .oc-btn.ev {
+        background: var(--orange);
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(255, 107, 0, 0.3);
+      }
+
+      /* ─── FINAL CTA ───────────────────────────── */
+      #cta {
+        background: linear-gradient(135deg, var(--y) 0%, var(--orange) 100%);
+        padding: 100px 6vw;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      #cta::before {
+        content: "🥤";
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18rem;
+        opacity: 0.07;
+      }
+      #cta::after {
+        content: "🎋";
+        position: absolute;
+        right: -30px;
+        bottom: -30px;
+        font-size: 14rem;
+        opacity: 0.07;
+      }
+      #cta h2 {
+        font-family: "Abril Fatface", serif;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        color: #fff;
+        text-shadow: 0 3px 20px rgba(0, 0, 0, 0.15);
+        margin-bottom: 14px;
+      }
+      #cta p {
+        font-size: 1.05rem;
+        color: rgba(255, 255, 255, 0.88);
+        margin-bottom: 36px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.7;
+      }
+      .cta-wa {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #fff;
+        color: var(--g2);
+        border-radius: 50px;
+        padding: 16px 44px;
+        font-weight: 800;
+        font-size: 1.1rem;
+        text-decoration: none;
+        box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .cta-wa:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+      }
+
+      /* ─── FOOTER ──────────────────────────────── */
+      footer {
+        background: var(--brown);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 56px 6vw 32px;
+      }
+      .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 48px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      @media (max-width: 700px) {
+        .footer-inner {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+      }
+      .footer-brand .fb-logo {
+        font-family: "Baloo 2", cursive;
+        font-size: 1.6rem;
+        color: var(--lime);
+      }
+      .footer-brand p {
+        font-size: 0.83rem;
+        line-height: 1.75;
+        margin-top: 10px;
+        color: rgba(255, 255, 255, 0.55);
+      }
+      .footer-col h5 {
+        font-weight: 700;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 14px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+      .footer-col ul {
+        list-style: none;
+      }
+      .footer-col li {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 8px;
+        line-height: 1.5;
+      }
+      .footer-col li a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer-col li a:hover {
+        color: var(--lime);
+      }
+      .footer-copy {
+        max-width: 1200px;
+        margin: 24px auto 0;
+        text-align: center;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      /* ─── SHARED UTILS ────────────────────────── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (max-width: 600px) {
+        section,
+        #menu,
+        #why,
+        #location,
+        #contact,
+        #about,
+        #reviews {
+          padding-left: 5vw;
+          padding-right: 5vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ── NAV ── -->
+    <nav>
+      <div class="nav-brand">
+        <div class="nav-icon">🌿</div>
+        <div class="nav-name">
+          Jay Maa Banjari<small>Fresh Ganna Juice Center</small>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Order</a></li>
+      </ul>
+      <a
+        class="nav-wa"
+        href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%A5%A4"
+        target="_blank"
+        >💬 Order Now</a
+      >
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section id="hero">
+      <div class="hero-bg-text">GANNA</div>
+      <div class="hero-circle-big"></div>
+      <div class="hero-circle-sm"></div>
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="hero-pill">
+            <span>NEW</span> Best Juice in Birgoan, Raipur
+          </div>
+          <h1 class="hero-h1">Jay Maa<br /><em>Banjari</em></h1>
+          <p class="hero-desc">
+            Raipur's freshest sugarcane juice — pressed right in front of you,
+            served ice-cold, no artificial sweeteners. Just pure nature in a
+            glass.
+          </p>
+          <div class="hero-btns">
+            <button
+              class="btn-yellow"
+              onclick="
+                document
+                  .getElementById('menu')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              🥤 See Menu
+            </button>
+            <a
+              class="btn-ghost"
+              href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%A5%A4"
+              target="_blank"
+              >💬 Order on WhatsApp</a
+            >
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="num">500+</div>
+              <div class="lbl">Daily Glasses</div>
+            </div>
+            <div class="hero-stat-div"></div>
+            <div class="hero-stat">
+              <div class="num">100%</div>
+              <div class="lbl">Natural</div>
+            </div>
+            <div class="hero-stat-div"></div>
+            <div class="hero-stat">
+              <div class="num">₹10</div>
+              <div class="lbl">Starting Price</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-img-frame">
+            <div class="hero-img-ring"></div>
+            <div class="hero-img-ring2"></div>
+            <div class="hero-img-circle">
+              <img
+                src="https://cdn.pixabay.com/photo/2020/07/09/20/05/sugarcane-5388628_1280.jpg"
+                alt="Fresh Sugarcane"
+              />
+            </div>
+            <div class="hero-float-badge">
+              <div class="hfb-icon">🥤</div>
+              <div class="hfb-text">
+                <div class="t1">Fresh Pressed</div>
+                <div class="t2">Every Glass, Every Time</div>
+              </div>
+            </div>
+            <div class="hero-float-tag">⭐ Top Rated</div>
+          </div>
+        </div>
+      </div>
+      <a
+        style="
+          position: absolute;
+          bottom: 28px;
+          left: 50%;
+          transform: translateX(-50%);
+          color: rgba(255, 255, 255, 0.4);
+          font-size: 1.5rem;
+          text-decoration: none;
+          animation: bounceY 1.8s ease-in-out infinite;
+        "
+        href="#about"
+        >▼</a
+      >
+    </section>
+    <style>
+      @keyframes bounceY {
+        0%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        50% {
+          transform: translateX(-50%) translateY(9px);
+        }
+      }
+    </style>
+
+    <!-- wave -->
+    <div
+      class="wave-div"
+      style="
+        background: linear-gradient(160deg, #082d10, #1c8535);
+        line-height: 0;
+      "
+    >
+      <svg
+        viewBox="0 0 1440 60"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        style="display: block; width: 100%; height: 60px"
+      >
+        <path
+          d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"
+          fill="#fdf8ee"
+        />
+      </svg>
+    </div>
+
+    <!-- ── ABOUT ── -->
+    <section id="about">
+      <div class="about-wrap reveal">
+        <div class="about-img-stack">
+          <div class="aimg-deco">🎋</div>
+          <div class="aimg-main">
+            <img
+              src="https://cdn.pixabay.com/photo/2024/01/14/01/58/ai-generated-8507111_1280.jpg"
+              alt="Fresh Ganna Juice"
+            />
+          </div>
+          <div class="aimg-stat-card">
+            <div class="asc-icon">🌿</div>
+            <div>
+              <div class="asc-num">5★</div>
+              <div class="asc-lbl">Rated by Customers</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <div class="chip">Our Story</div>
+          <h2 class="about-h2">
+            From the <span>Fields</span> Straight to Your Glass
+          </h2>
+          <p class="about-p">
+            At Jay Maa Banjari, every glass is a promise — fresh, natural, and
+            full of goodness. We hand-pick the finest sugarcane and press it
+            fresh right in front of you, with zero artificial syrups or
+            shortcuts.
+          </p>
+          <p class="about-p">
+            Located near Veenu Petrol Pump, Birgoan, Raipur — we've become the
+            go-to spot for the entire neighborhood to cool down, refresh, and
+            feel good.
+          </p>
+          <div class="about-feats">
+            <div class="af-item">
+              <div class="af-dot">🌾</div>
+              <span>Farm-Fresh Cane</span>
+            </div>
+            <div class="af-item">
+              <div class="af-dot">🧼</div>
+              <span>100% Hygienic</span>
+            </div>
+            <div class="af-item">
+              <div class="af-dot">🚫</div>
+              <span>No Artificial Sugar</span>
+            </div>
+            <div class="af-item">
+              <div class="af-dot">⚡</div>
+              <span>Pressed in Seconds</span>
+            </div>
+          </div>
+          <div class="owner-strip">
+            <div class="owner-photo">
+              <img
+                src="https://cdn.pixabay.com/photo/2020/07/09/20/05/sugarcane-5388628_1280.jpg"
+                alt="Fresh Sugarcane"
+              />
+            </div>
+            <div>
+              <div class="owner-name">Pawan Sahu</div>
+              <div class="owner-sub">Jay Maa Banjari, Birgoan Raipur</div>
+              <div class="owner-quote">
+                "Every glass carries our love, freshness &amp; pure natural
+                taste."
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STATS BAND ── -->
+    <div class="stats-band reveal">
+      <div class="sb-item">
+        <div class="sb-num">500+</div>
+        <div class="sb-lbl">Glasses Daily</div>
+      </div>
+      <div class="sb-item">
+        <div class="sb-num">₹10</div>
+        <div class="sb-lbl">Starting Price</div>
+      </div>
+      <div class="sb-item">
+        <div class="sb-num">100%</div>
+        <div class="sb-lbl">Natural Fresh</div>
+      </div>
+      <div class="sb-item">
+        <div class="sb-num">8AM</div>
+        <div class="sb-lbl">Open Daily</div>
+      </div>
+    </div>
+
+    <!-- ── MENU ── -->
+    <section id="menu">
+      <div class="section-head reveal">
+        <div class="chip">What We Serve</div>
+        <h2>Fresh &amp; <span>Delicious</span> Menu</h2>
+        <p>
+          Every item pressed fresh to order — pick your favourite and enjoy!
+        </p>
+      </div>
+      <div class="menu-grid reveal">
+        <div class="menu-card mc1">
+          <div class="mc-top"><span>🥤</span></div>
+          <div class="mc-body">
+            <h3>Pure Ganna Juice</h3>
+            <p>
+              Classic fresh-pressed sugarcane, chilled to perfection — our
+              signature.
+            </p>
+            <div class="mc-foot">
+              <span class="mc-price">Starting ₹10</span>
+              <a
+                class="mc-wa"
+                href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%A5%A4"
+                target="_blank"
+                >💬</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="menu-card mc2">
+          <div class="mc-top"><span>🍋</span></div>
+          <div class="mc-body">
+            <h3>Ganna + Lemon</h3>
+            <p>
+              Sweet cane juice with a zingy lemon twist — refreshing and
+              energizing.
+            </p>
+            <div class="mc-foot">
+              <span class="mc-price">Starting ₹20</span>
+              <a
+                class="mc-wa"
+                href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%A5%A4"
+                target="_blank"
+                >💬</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="menu-card mc3">
+          <div class="mc-top"><span>🫚</span></div>
+          <div class="mc-body">
+            <h3>Ganna + Ginger</h3>
+            <p>Fresh ginger blended in for that bold, health-boosting kick.</p>
+            <div class="mc-foot">
+              <span class="mc-price">Starting ₹20</span>
+              <a
+                class="mc-wa"
+                href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%A5%A4"
+                target="_blank"
+                >💬</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="menu-card mc4">
+          <div class="mc-top"><span>🌿</span></div>
+          <div class="mc-body">
+            <h3>Pudina Special</h3>
+            <p>
+              Fresh mint leaves blended in — cool, calming, and absolutely
+              delicious.
+            </p>
+            <div class="mc-foot">
+              <span class="mc-price">Starting ₹20</span>
+              <a
+                class="mc-wa"
+                href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%A5%A4"
+                target="_blank"
+                >💬</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="menu-card mc5">
+          <div class="mc-top"><span>🥭</span></div>
+          <div class="mc-body">
+            <h3>Seasonal Mix</h3>
+            <p>
+              Ganna blended with fresh seasonal fruits — a new taste every
+              season!
+            </p>
+            <div class="mc-foot">
+              <span class="mc-price">Starting ₹20</span>
+              <a
+                class="mc-wa"
+                href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%A5%A4"
+                target="_blank"
+                >💬</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="menu-card mc6">
+          <div class="mc-top"><span>🧊</span></div>
+          <div class="mc-body">
+            <h3>Party Bulk Order</h3>
+            <p>
+              Events, functions &amp; parties — we serve large quantities at
+              special rates.
+            </p>
+            <div class="mc-foot">
+              <span class="mc-price">Starting ₹20</span>
+              <a
+                class="mc-wa"
+                href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20a%20bulk%20order%20%F0%9F%8E%89"
+                target="_blank"
+                >💬</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHY ── -->
+    <section id="why">
+      <div class="why-wrap">
+        <div class="why-left reveal">
+          <div class="chip">Why Choose Us</div>
+          <h2>Pure Nature.<br /><span>Every Glass.</span></h2>
+          <p>
+            We don't just sell juice — we deliver a promise of freshness,
+            hygiene, and natural goodness with every single cup.
+          </p>
+          <a
+            class="why-cta"
+            href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%A5%A4"
+            target="_blank"
+            >💬 Order Now</a
+          >
+        </div>
+        <div class="why-cards reveal">
+          <div class="why-card">
+            <div class="why-card-icon wci1">🌾</div>
+            <h4>Farm-Fresh Cane</h4>
+            <p>
+              We source the finest sugarcane directly from farms — always fresh,
+              never stored overnight.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-icon wci2">🧼</div>
+            <h4>100% Hygienic</h4>
+            <p>
+              Sparkling clean machines, glasses &amp; hands — we set the
+              standard for hygiene.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-icon wci3">⚡</div>
+            <h4>Ready in Seconds</h4>
+            <p>
+              Your juice is freshly pressed right in front of you — done in
+              under a minute.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-icon wci4">💰</div>
+            <h4>Best Price</h4>
+            <p>
+              Starting just ₹10 — the best tasting juice at the most affordable
+              price in town.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-icon wci5">🚫</div>
+            <h4>Zero Artificial Sugar</h4>
+            <p>
+              Only the natural sweetness of pure sugarcane — no syrups, no
+              additives, ever.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-icon wci6">❤️</div>
+            <h4>Made with Love</h4>
+            <p>
+              Every glass is made with care, passion, and pride — it's more than
+              juice, it's family.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── REVIEWS (auto scroll) ── -->
+    <section id="reviews">
+      <div class="reviews-head reveal">
+        <div class="chip">Customer Love</div>
+        <h2>What People <span>Say</span></h2>
+        <p>Thousands of happy customers — here's what they love about us</p>
+      </div>
+      <div class="reviews-track-wrap">
+        <div class="reviews-track">
+          <!-- Set 1 -->
+          <div class="rv-card">
+            <div class="rv-top">
+              <div class="rv-avatar">😊</div>
+              <div>
+                <div class="rv-name">Rahul Kumar</div>
+                <div class="rv-loc">📍 Birgoan, Raipur</div>
+              </div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">
+              "Best ganna juice in all of Birgoan! So fresh and chilled — I come
+              here every single day after work. Pawan bhai ka kaam ekdum top
+              hai!"
+            </p>
+            <span class="rv-tag">Pure Ganna Juice</span>
+          </div>
+          <div class="rv-card">
+            <div class="rv-top">
+              <div class="rv-avatar">👩</div>
+              <div>
+                <div class="rv-name">Sunita Devi</div>
+                <div class="rv-loc">📍 Raipur</div>
+              </div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">
+              "The lemon-ganna combo is just out of this world! Itna fresh juice
+              maine aur kahi nahi piya. Price bhi bahut reasonable hai. Highly
+              recommend!"
+            </p>
+            <span class="rv-tag">Ganna + Lemon</span>
+          </div>
+          <div class="rv-card">
+            <div class="rv-top">
+              <div class="rv-avatar">👨</div>
+              <div>
+                <div class="rv-name">Manoj Patel</div>
+                <div class="rv-loc">📍 Birgoan</div>
+              </div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">
+              "Very clean setup and great hygiene. My whole family loves it. We
+              come here every weekend — the pudina special is our favourite!"
+            </p>
+            <span class="rv-tag">Pudina Special</span>
+          </div>
+          <div class="rv-card">
+            <div class="rv-top">
+              <div class="rv-avatar">🧑</div>
+              <div>
+                <div class="rv-name">Amit Sahu</div>
+                <div class="rv-loc">📍 Raipur CG</div>
+              </div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">
+              "Ginger wala juice ek baar try karo — ekdum fresh and energizing.
+              Roz subah yahan se shuru karta hoon din. Best ₹20 ever spent!"
+            </p>
+            <span class="rv-tag">Ganna + Ginger</span>
+          </div>
+          <div class="rv-card">
+            <div class="rv-top">
+              <div class="rv-avatar">👩‍🦱</div>
+              <div>
+                <div class="rv-name">Priya Chandrakar</div>
+                <div class="rv-loc">📍 Birgoan</div>
+              </div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">
+              "Bulk order karaya tha beti ki birthday ke liye — 50 glasses!
+              Pawan bhai ne time pe ready kar diya. Sabne bahut pasand kiya.
+              Thank you!"
+            </p>
+            <span class="rv-tag">Party Bulk Order</span>
+          </div>
+          <div class="rv-card">
+            <div class="rv-top">
+              <div class="rv-avatar">👴</div>
+              <div>
+                <div class="rv-name">Ramesh Yadav</div>
+                <div class="rv-loc">📍 Near Veenu Pump</div>
+              </div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">
+              "Hamare ghar ke paas hi hai yeh juice center — roz ek glass pita
+              hoon. No chemicals, no sugar syrup. Pure natural taste. Bahut
+              achha kaam chal raha hai!"
+            </p>
+            <span class="rv-tag">Pure Ganna Juice</span>
+          </div>
+          <!-- Set 2 (duplicate for seamless loop) -->
+          <div class="rv-card">
+            <div class="rv-top">
+              <div class="rv-avatar">😊</div>
+              <div>
+                <div class="rv-name">Rahul Kumar</div>
+                <div class="rv-loc">📍 Birgoan, Raipur</div>
+              </div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">
+              "Best ganna juice in all of Birgoan! So fresh and chilled — I come
+              here every single day after work. Pawan bhai ka kaam ekdum top
+              hai!"
+            </p>
+            <span class="rv-tag">Pure Ganna Juice</span>
+          </div>
+          <div class="rv-card">
+            <div class="rv-top">
+              <div class="rv-avatar">👩</div>
+              <div>
+                <div class="rv-name">Sunita Devi</div>
+                <div class="rv-loc">📍 Raipur</div>
+              </div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">
+              "The lemon-ganna combo is just out of this world! Itna fresh juice
+              maine aur kahi nahi piya. Price bhi bahut reasonable hai. Highly
+              recommend!"
+            </p>
+            <span class="rv-tag">Ganna + Lemon</span>
+          </div>
+          <div class="rv-card">
+            <div class="rv-top">
+              <div class="rv-avatar">👨</div>
+              <div>
+                <div class="rv-name">Manoj Patel</div>
+                <div class="rv-loc">📍 Birgoan</div>
+              </div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">
+              "Very clean setup and great hygiene. My whole family loves it. We
+              come here every weekend — the pudina special is our favourite!"
+            </p>
+            <span class="rv-tag">Pudina Special</span>
+          </div>
+          <div class="rv-card">
+            <div class="rv-top">
+              <div class="rv-avatar">🧑</div>
+              <div>
+                <div class="rv-name">Amit Sahu</div>
+                <div class="rv-loc">📍 Raipur CG</div>
+              </div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">
+              "Ginger wala juice ek baar try karo — ekdum fresh and energizing.
+              Roz subah yahan se shuru karta hoon din. Best ₹20 ever spent!"
+            </p>
+            <span class="rv-tag">Ganna + Ginger</span>
+          </div>
+          <div class="rv-card">
+            <div class="rv-top">
+              <div class="rv-avatar">👩‍🦱</div>
+              <div>
+                <div class="rv-name">Priya Chandrakar</div>
+                <div class="rv-loc">📍 Birgoan</div>
+              </div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">
+              "Bulk order karaya tha beti ki birthday ke liye — 50 glasses!
+              Pawan bhai ne time pe ready kar diya. Sabne bahut pasand kiya.
+              Thank you!"
+            </p>
+            <span class="rv-tag">Party Bulk Order</span>
+          </div>
+          <div class="rv-card">
+            <div class="rv-top">
+              <div class="rv-avatar">👴</div>
+              <div>
+                <div class="rv-name">Ramesh Yadav</div>
+                <div class="rv-loc">📍 Near Veenu Pump</div>
+              </div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">
+              "Hamare ghar ke paas hi hai yeh juice center — roz ek glass pita
+              hoon. No chemicals, no sugar syrup. Pure natural taste. Bahut
+              achha kaam chal raha hai!"
+            </p>
+            <span class="rv-tag">Pure Ganna Juice</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LOCATION ── -->
+    <section id="location">
+      <div class="loc-wrap reveal">
+        <div class="loc-left">
+          <div class="chip">Visit Us</div>
+          <h2>Find Us in<br /><span>Birgoan, Raipur</span></h2>
+          <div class="loc-row">
+            <div class="loc-ic lc1">📍</div>
+            <div>
+              <h5>Address</h5>
+              <p>Near Veenu Petrol Pump,<br />Birgoan, Raipur, Chhattisgarh</p>
+            </div>
+          </div>
+          <div class="loc-row">
+            <div class="loc-ic lc2">🕐</div>
+            <div>
+              <h5>Opening Hours</h5>
+              <p>Daily: 8:00 AM – 10:00 PM</p>
+            </div>
+          </div>
+          <div class="loc-row">
+            <div class="loc-ic lc3">📞</div>
+            <div>
+              <h5>Call / WhatsApp</h5>
+              <p>
+                <strong style="font-size: 1.05rem; color: var(--g2)"
+                  >+91 82690 21484</strong
+                ><br />Available for orders &amp; catering
+              </p>
+            </div>
+          </div>
+          <div class="loc-btns">
+            <a
+              class="btn-green"
+              href="https://maps.app.goo.gl/h5ydywBmKWWCyGXP9"
+              target="_blank"
+              >📍 Google Maps</a
+            >
+            <a
+              class="btn-wa2"
+              href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%A5%A4"
+              target="_blank"
+              >💬 WhatsApp</a
+            >
+          </div>
+        </div>
+        <div class="map-box">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=81.5996%2C21.2380%2C81.6596%2C21.2680&layer=mapnik&marker=21.2530%2C81.6296"
+            allowfullscreen
+            loading="lazy"
+            title="Jay Maa Banjari Location"
+          >
+          </iframe>
+          <div class="map-footer">
+            <a href="https://maps.app.goo.gl/h5ydywBmKWWCyGXP9" target="_blank"
+              >📍 Open Exact Location in Google Maps ↗</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ORDER ── -->
+    <section id="contact">
+      <div class="order-wrap">
+        <div class="section-head reveal">
+          <div
+            class="chip"
+            style="background: linear-gradient(90deg, var(--g2), var(--lime))"
+          >
+            Order Now
+          </div>
+          <h2>Place Your <span>Order</span></h2>
+          <p>
+            Call or WhatsApp us — we'll have your glass ready fresh and waiting!
+          </p>
+        </div>
+        <div class="order-cards reveal">
+          <div class="oc">
+            <div class="oc-icon">📞</div>
+            <h4>Call to Order</h4>
+            <p>
+              Ring us directly and we'll have your juice pressed and ready by
+              the time you arrive.
+            </p>
+            <a href="tel:+918269021484" class="oc-btn call"
+              >📞 +91 82690 21484</a
+            >
+          </div>
+          <div class="oc">
+            <div class="oc-icon">💬</div>
+            <h4>WhatsApp Order</h4>
+            <p>
+              Tap below to instantly open WhatsApp and send your order in
+              seconds.
+            </p>
+            <a
+              href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%A5%A4"
+              target="_blank"
+              class="oc-btn wa"
+              >💬 WhatsApp Us</a
+            >
+          </div>
+          <div class="oc">
+            <div class="oc-icon">🎉</div>
+            <h4>Bulk &amp; Catering</h4>
+            <p>
+              Events, parties, functions? We supply bulk fresh juice at special
+              rates!
+            </p>
+            <a
+              href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20a%20bulk%20order%20for%20an%20event%20%F0%9F%8E%89"
+              target="_blank"
+              class="oc-btn ev"
+              >🎉 Enquire Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FINAL CTA ── -->
+    <section id="cta">
+      <h2>Come Visit Today! 🥤</h2>
+      <p>
+        Step in, refresh yourself — pure natural ganna juice awaits you at
+        Birgoan, Raipur.
+      </p>
+      <a
+        class="cta-wa"
+        href="https://wa.me/918269021484?text=Hello%20Pawan!%20I%20would%20like%20to%20place%20an%20order%20%F0%9F%A5%A4"
+        target="_blank"
+        >💬 Order on WhatsApp Now</a
+      >
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="fb-logo">🌿 Jay Maa Banjari</div>
+          <p>
+            Raipur's freshest sugarcane juice center — pure, natural, and full
+            of goodness since day one. Near Veenu Petrol Pump, Birgoan, Raipur
+            CG.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li>📞 +91 82690 21484</li>
+            <li>📍 Near Veenu Petrol Pump</li>
+            <li>🏙️ Birgoan, Raipur, CG</li>
+            <li>🕐 8:00 AM – 10:00 PM Daily</li>
+            <li>
+              <a
+                href="https://maps.app.goo.gl/h5ydywBmKWWCyGXP9"
+                target="_blank"
+                >📍 View on Google Maps</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copy">
+        © 2025 Jay Maa Banjari | Pawan Sahu | Birgoan, Raipur, Chhattisgarh
+      </div>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
