@@ -1,0 +1,14 @@
+# robots.txt for Jay Maa Banjari - Fresh Ganna Juice Center
+# Website: https://www.maabanjarijuice.shop/
+
+# Allow all search engine bots to crawl the entire site
+User-agent: *
+Allow: /
+
+# Point all bots to your sitemap
+Sitemap: https://www.maabanjarijuice.shop/sitemap.xml
+
+# Block bots from any future admin or private folders (good practice)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
